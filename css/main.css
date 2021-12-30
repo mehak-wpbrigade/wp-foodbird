@@ -2,23 +2,25 @@
     margin: 0;
     padding: 0;
 }
-.main{
+.main .container{
+    max-width: 1024px;
     display: flex;
-    /* flex-wrap: wrap; */
+    margin: auto;
+    box-shadow: 5px 10px 8px #888888;
 }
 
 .side-bar{
-    width: 250px;
+    width: 228px;
     border: 1px solid red;
     box-sizing: border-box;
-    height: 600px;
+    height: 790px;
     display: flex;
     flex-direction: column;
     /* justify-content:space-around; */
 }
 
 .content{
-    width: calc(100% - 250px);
+    width: calc(100% - 228px);
     box-sizing: border-box;
 }
 
@@ -26,6 +28,10 @@
     background-image: url("../images/logoshadow.png");
     display: flex;
     justify-content: center;
+}
+
+.logo a{
+    padding-top: 44px;
 }
 /*------sidebar menu-------*/
 .side-bar-menu{
@@ -36,10 +42,11 @@
     text-align: center;
     /* margin: auto; */
     width: 100%;
+    margin: 77px auto 20px;
 }
 .side-bar-menu ul a{
     color: black;
-    font-size: 26px;
+    font-size: 20px;
     line-height: 36px;
     text-decoration: none;
 }
@@ -140,7 +147,7 @@
     /* position: relative;     */
 }
    
-.food-bird-slider .container{
+.food-bird-slider .container-slider{
     width: 485px;
     margin: auto;
     border:2px solid pink;
