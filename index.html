@@ -16,14 +16,33 @@
 </head>
 <body>
     <div class="main">
+        <div class="header">
+            <div class="toggler">
+                <button class="openbtn" onclick="openNav()">
+                    <img src="images/hamburger button.png">
+                </button>
+            </div>
+            <div class="header-logo">
+                <a href="">
+                  <img src="images/logo schets TEXT.png">
+                </a>
+            </div>
+        </div>
         <div class="container">
         <section class="side-bar">
-                <div class="logo">
-                    <a href="#">
-                    <img src="images/logo.png">
-                    </a>
+                <div class="side-bar-logo">
+                    <div class="side-togg">
+                        <a href="#" class="closebtn" onclick="closeNav()">
+                            <img src="images/hamburger button.png">
+                        </a>
+                    </div>
+                    <div class="logo-img">
+                        <a href="#">
+                        <img src="images/logo.png">
+                        </a>
+                    </div>
                 </div>
-                <div class="side-bar-menu">
+                <div class="side-bar-menu" id="mySidenav">
                     <ul>
                         <li class="active"><a href=""> Home</a></li>
                         <li><a href="#"> FoodBirds</a></li>
@@ -131,41 +150,51 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/slick.min.js"></script>
+
     <script type="text/javascript">
-        $(".myslider").slick({
-        dots: true,
-        infinite: false,
-        speed: 300,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        prevArrow: ".priv_arrow",
-        nextArrow: ".next_arrow",
-        responsive: [
-          {
-            breakpoint: 1024,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              infinite: false,
-              dots: true,
-            },
-          },
-          {
-            breakpoint: 600,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-            },
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-            },
-          },
-        ],
-      });
+    //-----------slider-------------
+    //     $(".myslider").slick({
+    //     dots: true,
+    //     infinite: false,
+    //     speed: 300,
+    //     slidesToShow: 1,
+    //     slidesToScroll: 1,
+    //     prevArrow: ".priv_arrow",
+    //     nextArrow: ".next_arrow",
+    //     responsive: [
+    //       {
+    //         breakpoint: 1024,
+    //         settings: {
+    //           slidesToShow: 1,
+    //           slidesToScroll: 1,
+    //           infinite: false,
+    //           dots: true,
+    //         },
+    //       },
+    //       {
+    //         breakpoint: 600,
+    //         settings: {
+    //           slidesToShow: 1,
+    //           slidesToScroll: 1,
+    //         },
+    //       },
+    //       {
+    //         breakpoint: 480,
+    //         settings: {
+    //           slidesToShow: 1,
+    //           slidesToScroll: 1,
+    //         },
+    //       },
+    //     ],
+    //   });
+
+       function openNav() {
+         document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        }
     </script>
 </body>
 </html>
