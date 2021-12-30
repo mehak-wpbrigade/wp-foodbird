@@ -147,7 +147,7 @@
     position: relative;
 }
 
-.food-bird-slider h2{
+.food-bird-slider h3{
     text-align: center;
     text-transform: uppercase;
     padding: 20px 0 45px;
@@ -174,10 +174,16 @@
     z-index: 2;
     top: 55%;
     transform: translateY(-50%);
+    left: -10px;
 }
 
 .next_arrow{
-    
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
+    top: 55%;
+    transform: translateY(-50%);
+    right: -10px;
 }
 /*----dots styling------*/
 .myslider .slick-dots{
@@ -203,4 +209,10 @@
 
 .myslider .slick-dots li.slick-active{
     background-color: #ff0000;
+}
+
+.slider-text h2{
+    font-size: 35px;
+    text-transform: uppercase;
+    text-align: center;
 }
