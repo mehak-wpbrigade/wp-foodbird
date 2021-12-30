@@ -7,12 +7,15 @@
     display: flex;
     margin: auto;
     box-shadow: 5px 10px 8px #888888;
+    box-sizing: border-box;
 }
 .btn{
     background-color: #fc8c15;
-    border-radius: 8%;
+    border-radius: 7%;
     text-align: center;
     transition: all 0.3s;
+    cursor: pointer;
+    border: 2px solid #fc8c15;
 }
 
 .btn a{
@@ -22,10 +25,13 @@
     color: #fff;
 }
 
-.text-section-btn:hover{
-    opacity: 0.8;
+.btn:hover{
+    background-color: transparent;
 }
 
+.btn:hover a{
+    color: #fc8c15;
+}
 /*------main----*/
 .side-bar{
     width: 228px;
@@ -48,7 +54,7 @@
 }
 
 .logo a{
-    padding-top: 44px;
+    padding: 44px 0 44px;
 }
 /*------sidebar menu-------*/
 .side-bar-menu{
@@ -102,6 +108,10 @@
    padding: 0 15px;
 }
 
+.side-bar-icons a:hover{
+    opacity: 0.7;
+}
+
 /*=========content section======*/
 /*------hero section----*/
 .hero-section{
@@ -150,10 +160,9 @@
 .food-bird-slider{
     background-image: url("../images/slidersectionbg.png");
     padding: 46px 0;
-    /* position: relative;     */
 }
    
-.food-bird-slider .container-slider{
+.food-bird-slider .slider-wrapper{
     width: 485px;
     margin: auto;
 }
@@ -164,6 +173,7 @@
     text-align: center;
     text-transform: uppercase;
     padding: 20px 0 45px;
+    font-size: 22px;
 }
 
 
@@ -171,11 +181,24 @@
     border: 4px solid black;    
 }
 /*---slider arrows---*/
-.next_arrow img, .priv_arrow img{
+.next_arrow, .priv_arrow{
     background-color: #000;
-    padding:5px 8px 7px;
+    padding:5px 5px 5px 5px;
     border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    position: relative;
+}
+.next_arrow:hover, .priv_arrow:hover{
+    opacity: 0.8;
+}
+.next_arrow img, .priv_arrow img{
     width: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
 }
 .priv_arrow{
     cursor: pointer;
@@ -205,7 +228,10 @@
     height: 7px !important;
     margin: 0 17px !important;
 }
-
+.myslider .slick-dots li:hover{
+    background-color: red !important;
+    opacity: 0.3 !important;
+}
 .myslider .slick-dots li button{
     padding: 0 !important;
 }
@@ -241,4 +267,87 @@
     width: max-content;
     padding: 10px 15px;
     margin: 35px auto 20px;
+}
+
+.card-sec{
+    background-color: #f1efe9;
+    padding: 45px 0 50px;
+}
+
+.card-wrapper{
+    width: 93%;
+    margin: 0 auto;
+}
+.card-sec h2{
+    font-size: 28px;
+    line-height: 38px;
+    text-align: center;
+    padding: 20px 0;
+    text-transform: uppercase;
+}
+
+.cards-main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    width: calc(50% - 80px);
+    margin: 15px 10px 15px;
+    padding: 30px 30px 30px;
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.card-logo{
+    height: 110px;
+    display: flex;
+    align-items: center;
+}
+
+.card-body{
+    margin: 20px 0 20px;
+}
+
+.card-body h4{
+    font-size: 18px;
+    line-height: 28px;
+    text-transform: uppercase;
+    margin: 15px 0 10px;
+}
+
+.card-body p{
+    font-size: 18px;
+    line-height: 24px;
+    margin: 10px 0 15px;
+}
+
+.card-body a{
+    text-decoration: none;
+    color: #959595;
+    font-size: 18px;
+    font-style: italic;
+}
+
+.card-sec .btn{
+    width: max-content;
+    margin: 40px auto 40px;
+    padding: 10px 15px;
+}
+
+.footer img{
+    width: 100%;
+    vertical-align: bottom;
+}
+/*---------MEdia Queries------*/
+@media screen and (max-width:768px) {
+    .card{
+        width: calc(100% - 80px);
+    }
+    
 }
