@@ -1,7 +1,13 @@
+:root{
+    --myorange:#fc8c15;
+    --myred:#ff0000;
+}
+
 *{
     margin: 0;
     padding: 0;
 }
+
 .main .container{
     max-width: 1024px;
     display: flex;
@@ -10,12 +16,12 @@
     box-sizing: border-box;
 }
 .btn{
-    background-color: #fc8c15;
+    background-color: var(--myorange);
     border-radius: 7%;
     text-align: center;
     transition: all 0.3s;
     cursor: pointer;
-    border: 2px solid #fc8c15;
+    border: 2px solid var(--myorange);
 }
 
 .btn a{
@@ -30,7 +36,7 @@
 }
 
 .btn:hover a{
-    color: #fc8c15;
+    color: var(--myorange);
 }
 /*------main----*/
 .main .header{
@@ -54,16 +60,16 @@
     width: calc(100% - 228px);
     box-sizing: border-box;
 }
-/*------sidebar menu-------*/
+/*------sidebar -------*/
 
 .side-bar-logo{
-    background-image: url("../images/logoshadow.png");
+    background: url("../images/logoshadow.png") no-repeat;
     display: flex;
     justify-content: center;
-    border-bottom-right-radius: 22%;
-    border-bottom-left-radius: 22%;
+    border-bottom-right-radius: 28%;
+    border-bottom-left-radius: 28%;
     position: relative;
-    padding: 40px 0;
+    padding: 67px 0 80px;
 }
 
 .header .toggler button{
@@ -83,9 +89,9 @@
 .mbl-toggler{
     display: none;
 }
-
+/*------sidebar menu-------*/
 .side-bar-menu{
-    margin: 20px 0;
+    margin: 0;
 }
 
 .side-bar-menu ul{
@@ -96,7 +102,7 @@
 }
 
 .side-bar-menu ul a{
-    color: black;
+    color: #000;
     font-size: 22px;
     line-height: 54px;
     text-decoration: none;
@@ -107,8 +113,9 @@
     position: relative;
 }
 .side-bar-menu ul li:hover a{
-    color: #fc8c15;
+    color: var(--myorange);
 }
+
 .side-bar-menu li:before{
     content: "";
     position: absolute;
@@ -173,21 +180,21 @@
     min-height: 420px;
     display: flex;
     align-items: center;
-    padding: 30px 0;
+    padding: 0;
 }
 
 .text-section p{
     font-size: 21px;
     line-height: 32px;
     width: 77%;
-    margin: 0px auto 59px;
+    margin: 30px auto 59px;
     text-align: center;
 }
 
 .text-section .btn{
     padding: 10px 15px;
     width: max-content;
-    margin: 0 auto 0;
+    margin: 10px auto 10px;
 }
 
 /*----slider section---*/
@@ -203,6 +210,7 @@
 .slider-sec{
     position: relative;
 }
+
 .food-bird-slider h3{
     text-align: center;
     text-transform: uppercase;
@@ -212,7 +220,7 @@
 
 
 .slider-content img{
-    border: 4px solid black;  
+    border: 4px solid #000;  
     box-sizing: border-box;  
 }
 /*---slider arrows---*/
@@ -224,17 +232,20 @@
     height: 15px;
     position: relative;
 }
+
 .next_arrow:hover, .priv_arrow:hover{
     opacity: 0.8;
 }
+
 .next_arrow img, .priv_arrow img{
-    width: 10px;
+    /* width: 10px; */
     position: absolute;
     top: 50%;
     left: 50%;
     right: 50%;
     transform: translate(-50%, -50%);
 }
+
 .priv_arrow{
     cursor: pointer;
     position: absolute;
@@ -256,6 +267,7 @@
 .myslider .slick-dots{
     bottom: -38px !important;
 }
+
 .myslider .slick-dots li{
     border: 2px solid black;
     border-radius: 50%;
@@ -263,10 +275,12 @@
     height: 7px !important;
     margin: 0 17px !important;
 }
+
 .myslider .slick-dots li:hover{
-    background-color: #ff0000 !important;
+    background-color: var(--myred) !important;
     opacity: 0.3 !important;
 }
+
 .myslider .slick-dots li button{
     padding: 0 !important;
 }
@@ -278,7 +292,7 @@
 }
 
 .myslider .slick-dots li.slick-active{
-    background-color: #ff0000;
+    background-color: var(--myred);
 }
 
 .slider-text{
@@ -313,6 +327,7 @@
     width: 93%;
     margin: 0 auto;
 }
+
 .card-sec h2{
     font-size: 28px;
     line-height: 38px;
@@ -379,12 +394,8 @@
     width: 100%;
     vertical-align: bottom;
 }
-/*---------MEdia Queries------*/
+/*---------Media Queries------*/
 @media screen and (max-width:768px) {
-    .card{
-        width: calc(100% - 80px);
-    }
-
     .content{
         width: 100%;
     }
@@ -420,7 +431,13 @@
     .desktop-toggler{
         display: none;
     }
+
+    /*---card mbl--*/
+    .card{
+        width: calc(100% - 80px);
+    }
 }
+
 @media screen and (min-width:769px) {
   .side-bar{
     width: 228px !important;
@@ -429,5 +446,4 @@
   .main .header{
     display: none !important;
 }
-
 }
