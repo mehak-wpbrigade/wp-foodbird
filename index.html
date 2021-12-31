@@ -28,15 +28,10 @@
                 </a>
             </div>
         </div>
-        <div class="container">
+        <div class="container-main">
         <section class="side-bar" id="mySidenav">
                 <div class="side-bar-logo">
-                    <div class="side-togg desktop-toggler">
-                        <a href="#">
-                            <img src="images/hamburger button.png">
-                        </a>
-                    </div>
-                    <div class="side-togg mbl-toggler">
+                    <div class="side-togg">
                         <a href="#" class="closebtn" onclick="closeNav()">
                             <img src="images/hamburger button.png">
                         </a>
@@ -69,7 +64,7 @@
             </div>
         <!------text sec----->
             <div class="text-section">
-                <div class="text-sec-container">
+                <div class="container">
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
                     </p>
@@ -80,7 +75,7 @@
             </div>
         <!------slider sec----->
             <div class="food-bird-slider">
-                <div class="slider-wrapper">
+                <div class="container">
                     <h3>Foodbirds</h3>
                     <div class="slider-sec">
                     <span class="priv_arrow">
@@ -113,7 +108,7 @@
             </div>
         <!------card sec----->
             <div class="card-sec">
-                <div class="card-wrapper">
+                <div class="container">
                  <h2>wij zijn trots op onze partners</h2>
                  <div class="cards-main">
                     <div class="card">
@@ -196,12 +191,12 @@
     // -----------Navbar toggling menu-------------
          function openNav() {
          document.getElementById("mySidenav").style.width = "250px";
-         document.getElementById("myHeader").style.display = "none";
+        //  document.getElementById("myHeader").style.display = "none";
         }
 
         function closeNav() {
         document.getElementById("mySidenav").style.width = "0";
-        document.getElementById("myHeader").style.display = "flex";
+        // document.getElementById("myHeader").style.display = "flex";
         }
     </script>
 </body>

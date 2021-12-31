@@ -1,6 +1,5 @@
 :root{
     --myorange:#fc8c15;
-    --myred:#ff0000;
 }
 
 *{
@@ -8,13 +7,20 @@
     padding: 0;
 }
 
-.main .container{
+.container-main{
     max-width: 1024px;
     display: flex;
     margin: auto;
     box-shadow: 5px 10px 8px #888888;
     box-sizing: border-box;
 }
+
+.container{
+    max-width: 643px;
+    margin: 0 auto 0px;
+    padding: 0 15px;
+}
+
 .btn{
     background-color: var(--myorange);
     border-radius: 7%;
@@ -69,7 +75,7 @@
     border-bottom-right-radius: 28%;
     border-bottom-left-radius: 28%;
     position: relative;
-    padding: 67px 0 80px;
+    padding: 46px 0 57px;
 }
 
 .header .toggler button{
@@ -78,7 +84,9 @@
     outline: none;
     cursor: pointer;
 }
-
+.side-togg{
+    display: none;
+}
 .side-togg a{
     position: absolute;
     top: 10px;
@@ -86,7 +94,7 @@
     margin-left: 50px;
 }
 
-.mbl-toggler{
+.side-toggler{
     display: none;
 }
 /*------sidebar menu-------*/
@@ -98,18 +106,18 @@
     list-style-type: none;
     text-align: center;
     width: 100%;
-    margin: 70px auto 20px;
+    margin: 30px auto 20px;
 }
 
 .side-bar-menu ul a{
     color: #000;
     font-size: 22px;
-    line-height: 54px;
+    line-height: 48px;
     text-decoration: none;
 }
 
 .side-bar-menu ul li{
-    padding: 4px 0px;
+    padding: 9px 0px 5px;
     position: relative;
 }
 .side-bar-menu ul li:hover a{
@@ -139,12 +147,13 @@
 /*----sidebar icons---*/
 .side-bar-icons{
     text-align: center;
-    margin: 50px 0;
+    margin: 46px 0;
     margin-top: auto;
 }
 
 .side-bar-icons a{
-   padding: 0 15px;
+   padding: 0 14px;
+   transition: all 0.3s;
 }
 
 .side-bar-icons a:hover{
@@ -177,44 +186,42 @@
 /*-------text-section----*/
 .text-section{
     background-color: #f1efe9;
-    min-height: 420px;
+    /* min-height: 380px; */
     display: flex;
-    align-items: center;
     padding: 0;
+    padding: 82px 10px 87px;
 }
 
 .text-section p{
     font-size: 21px;
     line-height: 32px;
-    width: 77%;
-    margin: 30px auto 59px;
+    /* width: 77%; */
     text-align: center;
 }
 
 .text-section .btn{
-    padding: 10px 15px;
+    padding: 7px 20px;
     width: max-content;
-    margin: 10px auto 10px;
+    margin: 38px auto 21px;
 }
 
 /*----slider section---*/
 .food-bird-slider{
     background-image: url("../images/slidersectionbg.png");
-    padding: 46px 0;
+    padding: 65px 10px 88px;
 }
    
-.food-bird-slider .slider-wrapper{
-    width: 485px;
-    margin: auto;
+.food-bird-slider .container{
+    max-width: 485px;
 }
 .slider-sec{
     position: relative;
+    margin: 40px 0 65px;
 }
 
 .food-bird-slider h3{
     text-align: center;
     text-transform: uppercase;
-    padding: 20px 0 45px;
     font-size: 22px;
 }
 
@@ -231,6 +238,7 @@
     width: 15px;
     height: 15px;
     position: relative;
+    transform: all 0.3s;
 }
 
 .next_arrow:hover, .priv_arrow:hover{
@@ -277,8 +285,8 @@
 }
 
 .myslider .slick-dots li:hover{
-    background-color: var(--myred) !important;
-    opacity: 0.3 !important;
+    background-color: #fdba72 !important;
+    /* opacity: 0.3 !important; */
 }
 
 .myslider .slick-dots li button{
@@ -292,7 +300,7 @@
 }
 
 .myslider .slick-dots li.slick-active{
-    background-color: var(--myred);
+    background-color: var(--myorange);
 }
 
 .slider-text{
@@ -303,36 +311,35 @@
     font-size: 25px;
     text-transform: uppercase;
     text-align: center;
-    padding: 10px 0 10px;
 }
 
 .slider-text p{
     text-align: center;
     font-size: 18px;
     line-height: 28px;
+    margin: 15px 0 0;
 }
 
 .slider-text .btn{
     width: max-content;
-    padding: 10px 15px;
-    margin: 35px auto 20px;
+    padding: 7px 11px;
+    margin: 36px auto 0;
 }
 
 .card-sec{
     background-color: #f1efe9;
-    padding: 45px 0 50px;
+    padding: 62px 0 86px;
 }
 
-.card-wrapper{
-    width: 93%;
-    margin: 0 auto;
+.card-sec .container{
+    max-width: 703px;
 }
 
 .card-sec h2{
-    font-size: 28px;
+    font-size: 21px;
     line-height: 38px;
     text-align: center;
-    padding: 20px 0;
+    /* padding: 20px 0; */
     text-transform: uppercase;
 }
 
@@ -340,6 +347,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin: 18px 0 0;
 }
 
 .card{
@@ -347,9 +355,10 @@
     flex-direction: column;
     align-items: center;
     background-color: #fff;
-    width: calc(50% - 80px);
-    margin: 15px 10px 15px;
-    padding: 30px 30px 30px;
+    width: calc(50% - 91px);
+    min-height: 310px;
+    margin: 18px 11px 15px;
+    padding: 38px 39px 30px 30px;
     box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.2);
     text-align: center;
 }
@@ -365,16 +374,16 @@
 }
 
 .card-body h4{
-    font-size: 18px;
+    font-size: 12px;
     line-height: 28px;
     text-transform: uppercase;
-    margin: 15px 0 10px;
+    margin: 10px 0 0;
 }
 
 .card-body p{
     font-size: 18px;
     line-height: 24px;
-    margin: 10px 0 15px;
+    margin: 10px 0 0px;
 }
 
 .card-body a{
@@ -382,12 +391,14 @@
     color: #959595;
     font-size: 18px;
     font-style: italic;
+    display: block;
+    margin: 15px 0 0;
 }
 
 .card-sec .btn{
     width: max-content;
-    margin: 40px auto 40px;
-    padding: 10px 15px;
+    margin: 40px auto 0px;
+    padding: 7px 15px;
 }
 
 .footer img{
@@ -424,20 +435,22 @@
         left: 0;
     }
 
-    .mbl-toggler{
+    .side-toggler{
         display: block;
-    }
-
-    .desktop-toggler{
-        display: none;
     }
 
     /*---card mbl--*/
     .card{
-        width: calc(100% - 80px);
+        width: calc(76% - 80px);
     }
 }
 
+@media screen and (max-width: 480px) {
+    .card{
+        width: calc(100% - 80px);
+        margin: 10px 0 15px;
+    }
+}
 @media screen and (min-width:769px) {
   .side-bar{
     width: 228px !important;
