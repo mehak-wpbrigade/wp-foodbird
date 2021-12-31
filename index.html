@@ -16,7 +16,7 @@
 </head>
 <body>
     <div class="main">
-        <div class="header">
+        <div class="header" id="myHeader">
             <div class="toggler">
                 <button class="openbtn" onclick="openNav()">
                     <img src="images/hamburger button.png">
@@ -29,9 +29,14 @@
             </div>
         </div>
         <div class="container">
-        <section class="side-bar">
+        <section class="side-bar" id="mySidenav">
                 <div class="side-bar-logo">
-                    <div class="side-togg">
+                    <div class="side-togg desktop-toggler">
+                        <a href="#">
+                            <img src="images/hamburger button.png">
+                        </a>
+                    </div>
+                    <div class="side-togg mbl-toggler">
                         <a href="#" class="closebtn" onclick="closeNav()">
                             <img src="images/hamburger button.png">
                         </a>
@@ -42,7 +47,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="side-bar-menu" id="mySidenav">
+                <div class="side-bar-menu">
                     <ul>
                         <li class="active"><a href=""> Home</a></li>
                         <li><a href="#"> FoodBirds</a></li>
@@ -152,48 +157,51 @@
     <script src="js/slick.min.js"></script>
 
     <script type="text/javascript">
-    //-----------slider-------------
-    //     $(".myslider").slick({
-    //     dots: true,
-    //     infinite: false,
-    //     speed: 300,
-    //     slidesToShow: 1,
-    //     slidesToScroll: 1,
-    //     prevArrow: ".priv_arrow",
-    //     nextArrow: ".next_arrow",
-    //     responsive: [
-    //       {
-    //         breakpoint: 1024,
-    //         settings: {
-    //           slidesToShow: 1,
-    //           slidesToScroll: 1,
-    //           infinite: false,
-    //           dots: true,
-    //         },
-    //       },
-    //       {
-    //         breakpoint: 600,
-    //         settings: {
-    //           slidesToShow: 1,
-    //           slidesToScroll: 1,
-    //         },
-    //       },
-    //       {
-    //         breakpoint: 480,
-    //         settings: {
-    //           slidesToShow: 1,
-    //           slidesToScroll: 1,
-    //         },
-    //       },
-    //     ],
-    //   });
-
-       function openNav() {
+         
+    // -----------slider-------------
+        $(".myslider").slick({
+        dots: true,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: ".priv_arrow",
+        nextArrow: ".next_arrow",
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              infinite: false,
+              dots: true,
+            },
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            },
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            },
+          },
+        ],
+      });
+    // -----------Navbar toggling menu-------------
+         function openNav() {
          document.getElementById("mySidenav").style.width = "250px";
+         document.getElementById("myHeader").style.display = "none";
         }
 
         function closeNav() {
         document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("myHeader").style.display = "flex";
         }
     </script>
 </body>

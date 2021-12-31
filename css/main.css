@@ -36,11 +36,10 @@
 .main .header{
     display: flex;
     justify-content: space-between;
-    padding: 20px 20px 20px;
+    padding: 15px 20px 15px;
     box-sizing: border-box;
     display: none;
 }
-
 
 .side-bar{
     width: 228px;
@@ -67,6 +66,12 @@
     padding: 40px 0;
 }
 
+.header .toggler button{
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+}
 
 .side-togg a{
     position: absolute;
@@ -75,6 +80,9 @@
     margin-left: 50px;
 }
 
+.mbl-toggler{
+    display: none;
+}
 
 .side-bar-menu{
     margin: 20px 0;
@@ -83,7 +91,6 @@
 .side-bar-menu ul{
     list-style-type: none;
     text-align: center;
-    /* margin: auto; */
     width: 100%;
     margin: 70px auto 20px;
 }
@@ -98,6 +105,9 @@
 .side-bar-menu ul li{
     padding: 4px 0px;
     position: relative;
+}
+.side-bar-menu ul li:hover a{
+    color: #fc8c15;
 }
 .side-bar-menu li:before{
     content: "";
@@ -163,6 +173,7 @@
     min-height: 420px;
     display: flex;
     align-items: center;
+    padding: 30px 0;
 }
 
 .text-section p{
@@ -253,7 +264,7 @@
     margin: 0 17px !important;
 }
 .myslider .slick-dots li:hover{
-    background-color: red !important;
+    background-color: #ff0000 !important;
     opacity: 0.3 !important;
 }
 .myslider .slick-dots li button{
@@ -391,9 +402,32 @@
     }
 
     .side-bar{
+        background-color: #fff;
+        height: 100%;
         width: 0;
         overflow-x: hidden;
         transition: 0.5s;
+        position: fixed;
+        z-index: 3;
+        top: 0;
+        left: 0;
     }
+
+    .mbl-toggler{
+        display: block;
+    }
+
+    .desktop-toggler{
+        display: none;
+    }
+}
+@media screen and (min-width:769px) {
+  .side-bar{
+    width: 228px !important;
+  }
+
+  .main .header{
+    display: none !important;
+}
 
 }
