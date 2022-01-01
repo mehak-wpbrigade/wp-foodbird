@@ -57,10 +57,9 @@
 .side-bar {
   width: 228px;
   box-sizing: border-box;
-  height: 790px;
+  /* height: 790px; */
   display: flex;
   flex-direction: column;
-  /* justify-content:space-around; */
 }
 
 .content {
@@ -157,6 +156,7 @@
 .side-bar-icons a {
   padding: 0 14px;
   transition: all 0.3s;
+  display: inline-block;
 }
 
 .side-bar-icons a:hover {
