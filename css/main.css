@@ -92,6 +92,7 @@
 .main .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 15px 20px 15px;
   box-sizing: border-box;
   display: none;
@@ -197,6 +198,7 @@
   width: 0%;
   height: 0px;
 }
+
 .side-bar-menu ul li:hover a {
   color: var(--myorange);
 }
@@ -288,6 +290,7 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 1.45;
+  letter-spacing: 1.4px;
 }
 
 .slider-content img {
@@ -353,6 +356,8 @@
   width: 7px !important;
   height: 7px !important;
   margin: 0 17px !important;
+  transition: all 0.3s;
+
 }
 
 .myslider .slick-dots li:hover {
@@ -362,6 +367,7 @@
 
 .myslider .slick-dots li button {
   padding: 0 !important;
+
 }
 
 .myslider .slick-dots li button:before {
@@ -420,6 +426,7 @@
   text-transform: uppercase;
   font-family: "poppinsmedium", sans-serif;
   font-weight: 500;
+  letter-spacing: 2.4px;
 }
 
 .cards-main {
@@ -482,7 +489,7 @@
 }
 
 .card-body a:hover {
-  opacity: 0.8;
+  text-decoration: underline;
 }
 .card-sec .btn {
   width: max-content;
