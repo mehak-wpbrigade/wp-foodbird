@@ -1,3 +1,4 @@
+/*-----base-----*/
 :root {
   --myorange: #fc8c15;
 }
@@ -45,6 +46,7 @@
 .btn:hover a {
   color: var(--myorange);
 }
+
 /*------main----*/
 .main .header {
   display: flex;
@@ -173,7 +175,7 @@
   background-image: url("../images/homepagebannerimg.png");
   background-position: 96% 100%;
   background-size: cover;
-  height: 370px;
+  min-height: 370px;
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
@@ -188,20 +190,21 @@
   color: #fff;
   text-align: center;
   padding: 46px 0;
+  word-break: break-all;
 }
 
 /*-------text-section----*/
 .text-section {
   background-color: #f1efe9;
-  /* min-height: 380px; */
   display: flex;
-  padding: 82px 10px 102px;
+  align-items: center;
+  padding: 50px 15px 50px;
+  min-height: 300px;
 }
 
 .text-section p {
   font-size: 21px;
   line-height: 1.54;
-  /* width: 77%; */
   text-align: center;
 }
 
@@ -257,7 +260,6 @@
 
 .next_arrow img,
 .priv_arrow img {
-  /* width: 10px; */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -296,7 +298,8 @@
 }
 
 .myslider .slick-dots li:hover {
-  background-color: #fdba72 !important;
+  opacity: 0.6;
+  /* background-color: #fdba72 !important; */
 }
 
 .myslider .slick-dots li button {
@@ -321,6 +324,7 @@
   font-size: 25px;
   text-transform: uppercase;
   text-align: center;
+  word-break: break-all;
 }
 
 .slider-text p {
@@ -349,7 +353,6 @@
   font-size: 21px;
   line-height: 1.4;
   text-align: center;
-  /* padding: 20px 0; */
   text-transform: uppercase;
 }
 
@@ -375,7 +378,7 @@
 }
 
 .card-logo {
-  height: 110px;
+  min-height: 110px;
   display: flex;
   align-items: center;
 }
@@ -394,7 +397,7 @@
 .card-body p {
   font-size: 18px;
   line-height: 1.39;
-  margin: 24px 0 0px;
+  margin: 7px 0 0px;
 }
 
 .card-body a {
@@ -423,7 +426,7 @@
   }
 
   .food-bird-slider {
-    padding: 55px 10px 70px;
+    padding: 55px 0 70px;
   }
 
   .card-sec {
@@ -474,7 +477,7 @@
   }
 
   .food-bird-slider {
-    padding: 40px 10px 40px;
+    padding: 60px 10px 60px;
   }
 
   .slider-text .btn {
@@ -488,20 +491,26 @@
   /*---card mbl--*/
   .cards-main {
     justify-content: center;
-    margin: 0;
+    margin: 10px 0 10px
   }
 
   .card {
     width: calc(76% - 80px);
+    min-height: 260px;
+  padding: 15px 40px 15px 40px;
     margin: 10px 0 10px;
   }
 
   .card-sec {
-    padding: 35px 0 35px;
+    padding: 60px 0 60px;
   }
 
   .card-sec .btn {
     margin: 20px auto 0px;
+  }
+
+  .card-logo{
+    min-height: 35px;
   }
 }
 
