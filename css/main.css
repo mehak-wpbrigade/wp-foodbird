@@ -122,8 +122,8 @@
   background-size: cover;
   display: flex;
   justify-content: center;
-  border-bottom-right-radius: 28%;
-  border-bottom-left-radius: 28%;
+  border-bottom-right-radius: 36%;
+  border-bottom-left-radius: 36%;
   position: relative;
   padding: 46px 0 57px;
 }
@@ -167,6 +167,7 @@
   text-align: center;
   width: 100%;
   margin: 33px auto 0;
+  cursor: pointer;
 }
 
 .side-bar-menu ul a {
@@ -185,10 +186,6 @@
   position: relative;
 }
 
-.side-bar-menu ul li:hover a {
-  color: var(--myorange);
-}
-
 .side-bar-menu li:before {
   content: "";
   position: absolute;
@@ -202,8 +199,12 @@
   transform: translateX(-50%);
 }
 
-.side-bar-menu ul li:hover::before {
+/* .side-bar-menu ul li:hover::before {
   width: 0;
+} */
+
+.side-bar-menu ul li:hover a {
+  color: var(--myorange);
 }
 
 .side-bar-menu .active {
@@ -241,7 +242,7 @@
 
 .hero-section h1 {
   text-transform: uppercase;
-  font-size: 50px;
+  font-size: 57px;
   line-height: 76px;
   line-height: 1.2;
   color: #fff;
@@ -257,8 +258,8 @@
   background-color: #f1efe9;
   display: flex;
   align-items: center;
-  padding: 50px 15px 50px;
-  min-height: 300px;
+  padding: 50px 0px 50px;
+  min-height: 320px;
 }
 
 .text-section p {
@@ -278,7 +279,7 @@
 .food-bird-slider {
   background: url("../images/slidersectionbg.png") no-repeat;
   background-size: cover;
-  padding: 58px 10px 91px;
+  padding: 65px 0px 91px;
 }
 
 .food-bird-slider .container {
@@ -295,7 +296,7 @@
   text-transform: uppercase;
   font-family: 'poppinsmedium', sans-serif;
   font-weight: 500;
-  font-size: 22px;
+  font-size: 20px;
   line-height: 1.45;
 }
 
@@ -320,12 +321,17 @@
   opacity: 0.8;
 }
 
-.next_arrow img,
+.next_arrow img{
+  position: absolute;
+  top: 50%;
+  left: 54%;
+  transform: translate(-50%, -50%);
+}
+
 .priv_arrow img {
   position: absolute;
   top: 50%;
-  left: 50%;
-  right: 50%;
+  left: 46%;
   transform: translate(-50%, -50%);
 }
 
@@ -410,7 +416,7 @@
 
 .card-sec {
   background-color: #f1efe9;
-  padding: 66px 0 86px;
+  padding: 60px 0 90px;
 }
 
 .card-sec .container {
@@ -418,7 +424,7 @@
 }
 
 .card-sec h2 {
-  font-size: 21px;
+  font-size: 24px;
   line-height: 1.4;
   text-align: center;
   text-transform: uppercase;
@@ -442,7 +448,7 @@
   width: calc(50% - 79px);
   min-height: 310px;
   margin: 18px 0px 15px;
-  padding: 27px 39px 42px 30px;
+  padding: 23px 39px 42px 30px;
   box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.2);
   text-align: center;
 }
@@ -458,7 +464,7 @@
 }
 
 .card-body h4 {
-  font-size: 12px;
+  font-size: 15px;
   line-height: 1.8;
   text-transform: uppercase;
   font-family: 'poppinsbold', sans-serif;
@@ -467,9 +473,9 @@
 }
 
 .card-body p {
-  font-size: 14px;
-  line-height: 1.39;
-  margin: 7px 0 0px;
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 2px 0 0px;
   font-family: 'poppinslight', sans-serif;
   font-weight: 300;
 }
@@ -477,14 +483,17 @@
 .card-body a {
   text-decoration: none;
   color: #959595;
-  font-size: 18px;
+  font-size: 14px;
   font-style: italic;
-  display: block;
+  display: inline-block;
   margin: 15px 0 0;
   font-family: 'poppinslight', sans-serif;
   font-weight: 300;
 }
 
+.card-body a:hover{
+  opacity: 0.8;
+}
 .card-sec .btn {
   width: max-content;
   margin: 36px auto 0px;
@@ -498,7 +507,7 @@
 /*---------Media Queries------*/
 @media screen and (max-width: 1024px) {
   .text-section {
-    padding: 62px 10px 67px;
+    padding: 62px 0 67px;
   }
 
   .food-bird-slider {
@@ -545,7 +554,7 @@
   }
 
   .text-section {
-    padding: 45px 10px 45px;
+    padding: 45px 0 45px;
   }
 
   .text-section .btn {
@@ -553,7 +562,7 @@
   }
 
   .food-bird-slider {
-    padding: 60px 10px 60px;
+    padding: 60px 0 60px;
   }
 
   .slider-text .btn {
@@ -594,6 +603,9 @@
   .card {
     width: calc(100% - 80px);
     margin: 10px 0 15px;
+  }
+  .text-section p{
+    line-height: 1.6;
   }
 }
 
